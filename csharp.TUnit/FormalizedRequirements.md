@@ -6,19 +6,19 @@ There is an application that simulates state of products for the shop. New type 
 
 ### Sulfuras
 
-- All products with name starts with 'Sulfuras' (**Attention: not sure**)
+- All products with name starts with 'Sulfuras' (**Attention: guess**)
 - SellIn doesn't change
-- Quality doesn't change
+- Quality doesn't change (**Attention: guess: and always equals to 80**)
 
 ### Aged Brie
 
-- All products with name 'Aged Brie' (**Attention: not sure**)
+- All products with name 'Aged Brie' (**Attention: guess**)
 - SellIn infinitely decreasing by 1
 - Quality increasing by 1 up to 50
 
 ### Backstage passes
 
-- All products with name starts with 'Backstage passes' (**Attention: not sure**)
+- All products with name starts with 'Backstage passes' (**Attention: guess**)
 - SellIn infinitely decreasing by 1
 - Quality increasing up to 50
   - by 1 if SellIn > 10
@@ -28,7 +28,7 @@ There is an application that simulates state of products for the shop. New type 
 
 ### Conjured
 
-- All products with name starts with 'Conjured' (**Attention: not sure**)
+- All products with name starts with 'Conjured' (**Attention: guess**)
 - SellIn infinitely decreasing by 1
 - Quality infinitely decreasing down to 0
   - by 2 if SellIn >= 0
@@ -55,6 +55,7 @@ There is an application that simulates state of products for the shop. New type 
    - Backstage passes to a TAFKAL80ETC concert, SellIn = 15, Quality = 20
    - Backstage passes to a TAFKAL80ETC concert, SellIn = 10, Quality = 49
    - Backstage passes to a TAFKAL80ETC concert, SellIn = 5, Quality = 49
+   - Conjured Mana Cake, SellIn = 3, Quality = 6
 3. For each day, starting from 0 and ending with day from point 1 run the simulation
     - On day 0 do nothing
     - On any other day apply [rules based on product type](#types-of-items)
