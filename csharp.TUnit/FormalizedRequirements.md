@@ -14,7 +14,9 @@ There is an application that simulates state of products for the shop. New type 
 
 - All products with name 'Aged Brie' (**Attention: guess**)
 - SellIn infinitely decreasing by 1
-- Quality increasing by 1 up to 50
+- Quality increasing up to 50
+    - by 1 if SellIn >= 0
+    - by 2 if SellIn < 0
 
 ### Backstage passes
 
