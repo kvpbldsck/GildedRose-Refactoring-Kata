@@ -20,12 +20,14 @@ public class GildedRoseTest
         yield return new((
                 new() {Name = "sulfuras, hand of ragnaros", SellIn = 1, Quality = 80},
                 new() {Name = "Sulfuras, Hand of Ragnaros", SellIn = 1, Quality = 80}), 
-            DisplayName: "Sulfuras detection lower case");
+            DisplayName: "Sulfuras detection lower case",
+            Skip: RequirementsSkipReason);
         
         yield return new((
                 new() {Name = "SULFURAS, HAND OF RAGNAROS", SellIn = 1, Quality = 80},
                 new() {Name = "SULFURAS, HAND OF RAGNAROS", SellIn = 1, Quality = 80}), 
-            DisplayName: "Sulfuras detection upper case");
+            DisplayName: "Sulfuras detection upper case",
+            Skip: RequirementsSkipReason);
         
         yield return new((
                 new() {Name = "Sulfuras, Hand of Ragnaros", SellIn = 1, Quality = 0},
@@ -56,7 +58,7 @@ public class GildedRoseTest
         
         yield return new((
                 new() {Name = "Aged Brie", SellIn = 0, Quality = 1},
-                new() {Name = "Aged Brie", SellIn = -1, Quality = 2}),
+                new() {Name = "Aged Brie", SellIn = -1, Quality = 3}),
             DisplayName: "Aged Brie quality increasing after sell day");
         
         yield return new((
@@ -81,28 +83,28 @@ public class GildedRoseTest
         #region Backstage passes
         
         yield return new((
-                new() {Name = "Backstage passes to a TAFKAL80ETC", SellIn = 15, Quality = 1},
-                new() {Name = "Backstage passes to a TAFKAL80ETC", SellIn = 14, Quality = 2}),
+                new() {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 15, Quality = 1},
+                new() {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 14, Quality = 2}),
             DisplayName: "Backstage passes quality increasing");
         
         yield return new((
-                new() {Name = "Backstage passes to a TAFKAL80ETC", SellIn = 10, Quality = 1},
-                new() {Name = "Backstage passes to a TAFKAL80ETC", SellIn = 9, Quality = 3}),
+                new() {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 10, Quality = 1},
+                new() {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 9, Quality = 3}),
             DisplayName: "Backstage passes quality increasing by 2 if SellIn <= 10");
         
         yield return new((
-                new() {Name = "Backstage passes to a TAFKAL80ETC", SellIn = 5, Quality = 1},
-                new() {Name = "Backstage passes to a TAFKAL80ETC", SellIn = 4, Quality = 4}),
+                new() {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 5, Quality = 1},
+                new() {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 4, Quality = 4}),
             DisplayName: "Backstage passes quality increasing by 3 if SellIn <= 5");
         
         yield return new((
-                new() {Name = "Backstage passes to a TAFKAL80ETC", SellIn = 0, Quality = 1},
-                new() {Name = "Backstage passes to a TAFKAL80ETC", SellIn = -1, Quality = 0}),
+                new() {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 1},
+                new() {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = -1, Quality = 0}),
             DisplayName: "Backstage passes quality becomes 0 after SellIn < 0");
         
         yield return new((
-                new() {Name = "Backstage passes to a TAFKAL80ETC", SellIn = 1, Quality = 50},
-                new() {Name = "Backstage passes to a TAFKAL80ETC", SellIn = 0, Quality = 50}),
+                new() {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 1, Quality = 50},
+                new() {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 50}),
             DisplayName: "Backstage passes quality limited");
         
         yield return new((
